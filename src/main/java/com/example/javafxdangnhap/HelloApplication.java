@@ -1,69 +1,32 @@
 package com.example.javafxdangnhap;
 
 import javafx.application.Application;
-import javafx.geometry.HPos;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage)  {
+    public void start(Stage stage) throws Exception {
 
-        GridPane root = new GridPane();
-
-        root.setPadding(new Insets(20));
-        root.setHgap(25);
-        root.setVgap(15);
-
-        Label labelTitle = new Label("Enter your user name and password!");
+        Parent root1 = FXMLLoader.load(getClass().getResource("scene1.fxml"));
+        Scene scene1 = new Scene(root1,500,280);
+        scene1.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 
 
-        // Đặt vào ô lưới (0, 0) , bắc qua 2 cột, 1 dòng.
-        root.add(labelTitle, 0, 0, 2, 1);
-
-        Label labelUserName = new Label("User Name");
-        TextField fieldUserName = new TextField();
-
-        Label labelPassword = new Label("Password");
-
-        PasswordField fieldPassword = new PasswordField();
-
-        Button loginButton = new Button("Login");
-
-        GridPane.setHalignment(labelUserName, HPos.RIGHT);
-
-
-        // Đặt vào ô lưới (0,1)
-        root.add(labelUserName, 0, 1);
-
-
-        GridPane.setHalignment(labelPassword, HPos.RIGHT);
-        root.add(labelPassword, 0, 2);
-
-        // Căn lề trái cho User Name
-        GridPane.setHalignment(fieldUserName, HPos.LEFT);
-        root.add(fieldUserName, 1, 1);
-
-
-        // Căn lề trái cho trường Password
-        GridPane.setHalignment(fieldPassword, HPos.LEFT);
-        root.add(fieldPassword, 1, 2);
-
-
-        // Căn lề phải cho button Login.
-        GridPane.setHalignment(loginButton, HPos.RIGHT);
-        root.add(loginButton, 1, 3);
-
-        Scene scene = new Scene(root, 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
+        stage.setScene(scene1);
+        stage.setTitle("hello");
+        stage.setScene(scene1);
         stage.show();
     }
 

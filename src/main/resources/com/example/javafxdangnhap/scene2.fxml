@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="600.0" styleClass="grid" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdangnhap.HelloController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="178.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="406.0" minWidth="10.0" prefWidth="315.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="108.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="100.0" minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="100.0" minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Username" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label text="Password" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="us" maxWidth="300.0" prefHeight="31.0" prefWidth="289.0" promptText="tối thiểu 3 kí tự và không có kí tự đặc biệt " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <PasswordField fx:id="pwd" maxWidth="300.0" prefWidth="300.0" promptText="tối thiểu 8 kí tự và 1 kí tự đặc biệt " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <CheckBox mnemonicParsing="false" onAction="#checkbox1" text="Log in as adminstrator">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <Button fx:id="lgn" mnemonicParsing="false" onAction="#click2" prefHeight="31.0" prefWidth="301.0" text="Log in" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</GridPane>
